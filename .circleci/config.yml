@@ -13,12 +13,10 @@ jobs:
       - image: circleci/python:3.6.4
     working_directory: ~/raz.rocks
     steps:
-      - run:
-          name: List files
-          command: ls
+      - checkout
       - run:
           name: Copy files via ssh
-          command: scp -o StrictHostKeyChecking=no -r ~/raz.rocks raz@raz.rocks:/var/www/raz.rocks
+          command: scp -o StrictHostKeyChecking=no -r ~/raz.rocks raz@raz.rocks:/var/www/
 
 workflows:
   version: 2
