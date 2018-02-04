@@ -1,0 +1,5 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - scp -r ~/repo raz@raz.rocks:/var/www/raz.rocks
