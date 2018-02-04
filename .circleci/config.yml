@@ -2,6 +2,9 @@ version: 2
 
 jobs:
   build:
+    working_directory: ~/raz.rocks
+    docker:
+      - image: circleci/python:3.6.4
     steps:
       - checkout
       - run: echo "Baked repo, time to add frost"
@@ -10,4 +13,4 @@ deployment:
   production:
     branch: master
     commands:
-      - scp -r ~/repo raz@raz.rocks:/var/www/raz.rocks
+      - scp -r ~/raz.rocks raz@raz.rocks:/var/www/raz.rocks
