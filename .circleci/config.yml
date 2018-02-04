@@ -15,7 +15,7 @@ jobs:
     steps:
       - run:
           name: Copy files via ssh
-          command: scp -r ~/raz.rocks raz@raz.rocks:/var/www/raz.rocks
+          command: scp -o StrictHostKeyChecking=no -r ~/raz.rocks raz@raz.rocks:/var/www/raz.rocks
 
 workflows:
   version: 2
