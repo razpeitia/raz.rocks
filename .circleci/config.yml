@@ -1,5 +1,11 @@
 version: 2
 
+jobs:
+  build:
+    steps:
+      - checkout
+      - run: echo "Baked repo, time to add frost"
+
 deployment:
   production:
     branch: master
