@@ -8,9 +8,3 @@ jobs:
     steps:
       - checkout
       - run: echo "Baked repo, time to add frost"
-
-deployment:
-  production:
-    branch: master
-    commands:
-      - scp -r ~/raz.rocks raz@raz.rocks:/var/www/raz.rocks
